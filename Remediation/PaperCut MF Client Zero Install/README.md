@@ -4,8 +4,6 @@
 
 These remediation scripts will install the PaperCut MF Client tool via the zero-install method according to [PaperCut's website](https://www.papercut.com/help/manuals/ng-mf/clienttool/user-client-install-windows/#:~:text=The%20recommended%20approach%20with%20Windows%20networks%20is%20the,share%20-%20a%20share%20set%20up%20during%20installation.).
 
-Their documentation recommends launching `pc-client-local-cache.exe`, but this caused error messages on the clients on startup. Switching to `pc-client.exe` was more reliable with no error messages.
-
 ## Script Setup
 
 There are a few portions of the script that are specific to a company. The following variables need to be adjusted to fit your needs:
