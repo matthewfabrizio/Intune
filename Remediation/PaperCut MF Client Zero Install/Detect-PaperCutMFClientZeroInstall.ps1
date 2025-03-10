@@ -87,11 +87,10 @@ $ExecutablePath = "\\$PrintServer\PCClient\win\pc-client-local-cache.exe"
 $ExecutableArguments = "--silent"
 #endregion Variables
 
-# If the task is set to be removed, update the task name so the remediation script will run.
-# Do not update the removal script with this task name.
+# If the task is set to be removed, remediate.
 # This should be set to $true only when a separate remediation flow is created in Intune specifically for removing, else keep $false
 $Removal = $false
-if ($Removal) { $TaskName = "PaperCut MF Client Zero Install (Removal)" }
+if ($Removal) { exit 1 }
 
 <#
 PowerShell cmdlets don't provide all the details of a scheduled task, so we need to provide the expected XML structure to compare the task.
