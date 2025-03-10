@@ -63,9 +63,9 @@ $TaskPath = "\$CompanyName\"
 
 # Variables modified here will need to be updated in the Detect-PaperCutMFClientZeroInstall.ps1 script.
 # Changing these variables and redeploying will update the task to the new values.
-$Description = $Description
+$Description = "This task runs the PaperCut MF Client executable directly from the print server to stay up to date with the server."
 $PrintServer = "IP"
-$ExecutablePath = "\\$PrintServer\PCClient\win\pc-client.exe"
+$ExecutablePath = "\\$PrintServer\PCClient\win\pc-client-local-cache.exe"
 $ExecutableArguments = "--silent"
 #endregion Variables
 
@@ -88,7 +88,7 @@ $TaskSettingsParams = @{
   MultipleInstances          = "IgnoreNew"
 }
 
-$TaskPrincipal = New-ScheduledTaskPrincipal -GroupId "S-1-5-4" -RunLevel Limited
+$TaskPrincipal = New-ScheduledTaskPrincipal -GroupId "S-1-5-32-545" -RunLevel Limited
 
 $TaskParams = @{
   TaskName    = $TaskName

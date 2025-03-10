@@ -83,7 +83,7 @@ $TaskPath = "\$CompanyName\"
 # Changing these variables and redeploying will update the task to the new values.
 $Description = "This task runs the PaperCut MF Client executable directly from the print server to stay up to date with the server."
 $PrintServer = "IP"
-$ExecutablePath = "\\$PrintServer\PCClient\win\pc-client.exe"
+$ExecutablePath = "\\$PrintServer\PCClient\win\pc-client-local-cache.exe"
 $ExecutableArguments = "--silent"
 #endregion Variables
 
@@ -125,7 +125,7 @@ $ExpectedXml = @"
   </Triggers>
   <Principals>
     <Principal id="Author">
-      <GroupId>S-1-5-4</GroupId>
+      <GroupId>S-1-5-32-545</GroupId>
       <RunLevel>LeastPrivilege</RunLevel>
     </Principal>
   </Principals>
